@@ -8,6 +8,24 @@ module.exports = function(wagner) {
 
   api.use(bodyparser.json());
 
+  api.get('/category/id/:id', wagner.invoke(function(Category){
+    return function (req, res) {
+      Category.findOne({ _id: req.params.id }, function (error, category) {
+        if (error) {
+          return res.
+            status(status.INTERNAL_SERVER_ERROR).
+            json({ error: error.toString()});
+        }
+        if (!category) {
+          return res.
+            status(status.NOT_FOUND).
+            json({ error: 'Not found' });
+        }
+        res.json({ category: category });
+      });
+    }
+  }))
+
   api.put('/me/cart', wagner.invoke(function(User) {
     return function(req, res) {
       try {
