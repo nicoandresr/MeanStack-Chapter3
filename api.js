@@ -24,7 +24,7 @@ module.exports = function(wagner) {
         res.json({ category: category });
       });
     }
-  }))
+  }));
 
   api.put('/me/cart', wagner.invoke(function(User) {
     return function(req, res) {
