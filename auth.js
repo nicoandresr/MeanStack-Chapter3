@@ -18,8 +18,8 @@ function setupAuth(User, app) {
   passport.use(new FacebookStrategy(
     {
       // TODO: and use the Config service here
-      clientID: '249329922105598',
-      clientSecret: '023ad72d5f905f8a41629c2c15d0ce19',
+      clientID: process.env.FACEBOOK_CLIENT_ID,
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET,
       callbackURL: 'http://localhost:3000/auth/facebook/callback',
       // Necessary for new version of Facebook graph API
       profileFields: ['id', 'emails', 'name']
