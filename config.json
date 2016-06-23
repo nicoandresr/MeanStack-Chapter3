@@ -1,6 +1,6 @@
 {
-  "facebookClientId": "249329922105598",
-  "facebookClientSecret": "023ad72d5f905f8a41629c2c15d0ce19",
-  "stripeKey": "sk_test_sG1cUTYMRRUoBRFESDiKUbtv",
-  "openExchangeRatesKey": "d4147aac02f141ccbb04efff22ff9f5f"
+  "facebookClientId": "",
+  "facebookClientSecret": "",
+  "stripeKey": "",
+  "openExchangeRatesKey": ""
 }
